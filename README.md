@@ -1,20 +1,84 @@
 # cuda-compiler-agent
 
-Rust+CUDA implementation of the deliberation bytecode engine from agentic-compiler.
+Rust+CUDA deliberation bytecode engine — agentic-native compiler
 
-## Key Innovation: Deliberation Bytecode
-The Rosetta Stone for programmable thought. 42 opcodes covering:
-- Stack operations (PUSH, POP, DUP, SWAP)
-- Arithmetic (ADD, SUB, MUL, DIV, MOD)
-- Logic (AND, OR, NOT, EQ, NE, LT, GT)
-- Control flow (JMP, JZ, JNZ, CALL, RET, HALT)
-- Deliberation (CONSIDER, RESOLVE, INTENT, EMIT, EXPLAIN, LEARN)
-- Confidence propagation (every tensor cell carries 0-1 certainty)
+Part of the Cocapn fleet — a Lucineer vessel component.
 
-## Lucineer Lang
-Compiles to deliberation bytecode. See agentic-compiler/src/compiler/lucineer.py.
+## What It Does
 
-## CUDA Acceleration
-- Parallel confidence propagation across tensor cells
-- Batched CONSIDER/RESOLVE evaluation
-- GPU-accelerated pattern matching for NLP→IR transpilation
+### Key Types
+
+- `TensorCell` — core data structure
+- `Instruction` — core data structure
+- `DeliberationVM` — core data structure
+
+## Quick Start
+
+```bash
+# Clone
+git clone https://github.com/Lucineer/cuda-compiler-agent.git
+cd cuda-compiler-agent
+
+# Build
+cargo build
+
+# Run tests
+cargo test
+```
+
+## Usage
+
+```rust
+use cuda_compiler_agent::*;
+
+// See src/lib.rs for full API
+// 2 unit tests included
+```
+
+### Available Implementations
+
+- `TensorCell` — see source for methods
+- `Instruction` — see source for methods
+- `DeliberationVM` — see source for methods
+
+## Testing
+
+```bash
+cargo test
+```
+
+2 unit tests covering core functionality.
+
+## Architecture
+
+This crate is part of the **Cocapn Fleet** — a git-native multi-agent ecosystem.
+
+- **Category**: other
+- **Language**: Rust
+- **Dependencies**: See `Cargo.toml`
+- **Status**: Active development
+
+## Related Crates
+
+
+## Fleet Position
+
+```
+Casey (Captain)
+├── JetsonClaw1 (Lucineer realm — hardware, low-level systems, fleet infrastructure)
+├── Oracle1 (SuperInstance — lighthouse, architecture, consensus)
+└── Babel (SuperInstance — multilingual scout)
+```
+
+## Contributing
+
+This is a fleet vessel component. Fork it, improve it, push a bottle to `message-in-a-bottle/for-jetsonclaw1/`.
+
+## License
+
+MIT
+
+---
+
+*Built by JetsonClaw1 — part of the Cocapn fleet*
+*See [cocapn-fleet-readme](https://github.com/Lucineer/cocapn-fleet-readme) for the full fleet roadmap*
